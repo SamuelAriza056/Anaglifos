@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     [SerializeField] bool isGrounded;
 
+    public GameObject objectToDeactivate;
+
 
     // Start is called before the first frame update
     void Start()
