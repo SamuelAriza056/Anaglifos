@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     [SerializeField] bool isGrounded;
 
-    public GameObject objectToDeactivate;
+    public GameObject canvas;
 
 
     // Start is called before the first frame update
@@ -65,6 +65,6 @@ public class PlayerController : MonoBehaviour
 
     public void OnSpecialAction(InputAction.CallbackContext context)
     {
-        
+     
     }
 }
