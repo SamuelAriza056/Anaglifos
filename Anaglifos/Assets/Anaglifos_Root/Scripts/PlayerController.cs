@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] bool redPanelOn;
     [SerializeField] int randomInitialPanel;
 
+    [Header("Platform Parameters")]
+    public GameObject redGroup;
+
 
     // Start is called before the first frame update
     void Start()
