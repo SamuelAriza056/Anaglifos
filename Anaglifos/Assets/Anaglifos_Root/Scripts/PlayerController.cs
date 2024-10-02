@@ -15,7 +15,12 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     [SerializeField] bool isGrounded;
 
+    [Header("Canvas References")]
     public GameObject canvas;
+    [SerializeField] GameObject redPanel;
+    [SerializeField] GameObject bluePanel;
+    [SerializeField] bool redPanelOn;
+    [SerializeField] int randomInitialPanel;
 
 
     // Start is called before the first frame update
@@ -23,12 +28,24 @@ public class PlayerController : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody>();
         playerInput = GetComponent<PlayerInput>();
+        randomInitialPanel = Random.Range(0, 1);
+        if(randomInitialPanel == 0) { redPanelOn = true; }
+        else { redPanelOn = false; }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (redPanelOn)
+        {
+            redPanel.SetActive(true);
+            bluePanel.SetActive(false);
+        }
+        else
+        {
+            redPanel.SetActive(false);
+            bluePanel.SetActive(true);
+        }
     }
 
     private void FixedUpdate()
@@ -65,6 +82,6 @@ public class PlayerController : MonoBehaviour
 
     public void OnSpecialAction(InputAction.CallbackContext context)
     {
-     
+        if (context.started) { redPanelOn = !redPanelOn; }
     }
 }
