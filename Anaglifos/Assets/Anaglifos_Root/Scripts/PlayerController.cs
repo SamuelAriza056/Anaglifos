@@ -23,7 +23,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] int randomInitialPanel;
 
     [Header("Platform Parameters")]
-    public GameObject redGroup;
+    [SerializeField] GameObject redGroup;
+    [SerializeField] GameObject blueGroup;
+    [SerializeField] bool redGroupOn;
 
 
     // Start is called before the first frame update
@@ -34,6 +36,9 @@ public class PlayerController : MonoBehaviour
         randomInitialPanel = Random.Range(0, 1);
         if(randomInitialPanel == 0) { redPanelOn = true; }
         else { redPanelOn = false; }
+
+        if(redPanel) { redGroupOn = true; }
+        else { redGroupOn = false; }
     }
 
     // Update is called once per frame
@@ -41,14 +46,23 @@ public class PlayerController : MonoBehaviour
     {
         if (redPanelOn)
         {
+            //Paneles
             redPanel.SetActive(true);
             bluePanel.SetActive(false);
+            //Plataformas
+            redGroup.SetActive(true);
+            blueGroup.SetActive(false);
+           
         }
         else
         {
             redPanel.SetActive(false);
             bluePanel.SetActive(true);
+            redGroup.SetActive(false);
+            blueGroup.SetActive(true);
         }
+
+        
     }
 
     private void FixedUpdate()

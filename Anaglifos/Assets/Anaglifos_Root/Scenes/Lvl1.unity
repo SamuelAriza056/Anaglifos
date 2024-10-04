@@ -2416,9 +2416,19 @@ PrefabInstance:
       objectReference: {fileID: 1562599610}
     - target: {fileID: 2210324872297649869, guid: 5da1a2959af87d14db074577f9b0ceff,
         type: 3}
+      propertyPath: redGroup
+      value: 
+      objectReference: {fileID: 932463520}
+    - target: {fileID: 2210324872297649869, guid: 5da1a2959af87d14db074577f9b0ceff,
+        type: 3}
       propertyPath: redPanel
       value: 
       objectReference: {fileID: 1693668798}
+    - target: {fileID: 2210324872297649869, guid: 5da1a2959af87d14db074577f9b0ceff,
+        type: 3}
+      propertyPath: blueGroup
+      value: 
+      objectReference: {fileID: 1206991899}
     - target: {fileID: 2210324872297649869, guid: 5da1a2959af87d14db074577f9b0ceff,
         type: 3}
       propertyPath: bluePanel
