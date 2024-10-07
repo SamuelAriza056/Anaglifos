@@ -14,4 +14,16 @@ public class Main_Menu : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void Retry()
+    {
+      SceneManager.LoadSceneAsync("Lvl1");
+    }
+
+    public void Retrurn()
+    {
+        SceneManager.LoadSceneAsync("Main_menu");
+    }
 }
+
+

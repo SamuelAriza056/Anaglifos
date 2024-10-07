@@ -13,6 +13,7 @@ public class Audio_Manager : MonoBehaviour
     public AudioClip Death;
     public AudioClip Color;
     public AudioClip LevelStart;
+    public AudioClip Buttons;
 
     private void Start()
     {
