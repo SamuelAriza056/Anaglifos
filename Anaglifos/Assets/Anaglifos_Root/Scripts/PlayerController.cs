@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody playerRb;
     PlayerInput playerInput;
     Vector2 moveInput;
+    [SerializeField] Animator anim;
 
     [Header("Player Parameters")]
     public float speed;
