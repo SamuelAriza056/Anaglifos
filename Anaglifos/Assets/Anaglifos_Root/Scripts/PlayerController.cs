@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody playerRb;
     PlayerInput playerInput;
     Vector2 moveInput;
-    [SerializeField] Animator anim;
+    [SerializeField] Animator animator;
 
     [Header("Player Parameters")]
     public float speed;
@@ -63,7 +63,13 @@ public class PlayerController : MonoBehaviour
             blueGroup.SetActive(true);
         }
 
-        
+        Animator();
+
+    }
+
+    public void Animator()
+    {
+        animator.SetBool("walk", Mathf.Abs(playerRb.velocity.x) > 0.001f);
     }
 
     private void FixedUpdate()

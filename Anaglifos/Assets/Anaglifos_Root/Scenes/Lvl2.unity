@@ -1025,6 +1025,11 @@ PrefabInstance:
       objectReference: {fileID: 894405204}
     - target: {fileID: 2210324872297649869, guid: 5da1a2959af87d14db074577f9b0ceff,
         type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 691049303}
+    - target: {fileID: 2210324872297649869, guid: 5da1a2959af87d14db074577f9b0ceff,
+        type: 3}
       propertyPath: redGroup
       value: 
       objectReference: {fileID: 594666154}
@@ -1068,6 +1073,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da1a2959af87d14db074577f9b0ceff, type: 3}
+--- !u!95 &691049303 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1444033785728163258, guid: 5da1a2959af87d14db074577f9b0ceff,
+    type: 3}
+  m_PrefabInstance: {fileID: 691049302}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &704314138
 PrefabInstance:
   m_ObjectHideFlags: 0

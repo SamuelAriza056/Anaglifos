@@ -2945,6 +2945,11 @@ PrefabInstance:
       objectReference: {fileID: 1241050996}
     - target: {fileID: 2210324872297649869, guid: 5da1a2959af87d14db074577f9b0ceff,
         type: 3}
+      propertyPath: Robot
+      value: 
+      objectReference: {fileID: 1241050996}
+    - target: {fileID: 2210324872297649869, guid: 5da1a2959af87d14db074577f9b0ceff,
+        type: 3}
       propertyPath: speed
       value: 6
       objectReference: {fileID: 0}
@@ -2953,6 +2958,11 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1562599610}
+    - target: {fileID: 2210324872297649869, guid: 5da1a2959af87d14db074577f9b0ceff,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1241050996}
     - target: {fileID: 2210324872297649869, guid: 5da1a2959af87d14db074577f9b0ceff,
         type: 3}
       propertyPath: redGroup
@@ -2997,6 +3007,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 7799884751439123483, guid: 5da1a2959af87d14db074577f9b0ceff,
+        type: 3}
+      propertyPath: m_Name
+      value: Body
       objectReference: {fileID: 0}
     - target: {fileID: 9222253044570203862, guid: 5da1a2959af87d14db074577f9b0ceff,
         type: 3}
