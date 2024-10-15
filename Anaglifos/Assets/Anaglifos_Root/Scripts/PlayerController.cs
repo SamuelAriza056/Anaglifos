@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public float jumpForce;
     [SerializeField] bool isGrounded;
+    private bool isFacingRight = true;
 
     [Header("Canvas References")]
     public GameObject canvas;
@@ -64,12 +65,34 @@ public class PlayerController : MonoBehaviour
         }
 
         Animator();
+        PlayerDirection();
 
     }
 
     public void Animator()
     {
         animator.SetBool("walk", Mathf.Abs(playerRb.velocity.x) > 0.001f);
+    }
+
+    public void PlayerDirection()
+    {
+        if (playerRb.velocity.x > 0 && !isFacingRight)
+        {
+            Flip();
+        }
+
+        if (playerRb.velocity.x < 0 && isFacingRight)
+        {
+            Flip();
+        }
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = transform.localScale;
+        currentScale.x *= -1;
+        transform.localScale = currentScale;
+        isFacingRight = !isFacingRight;
     }
 
     private void FixedUpdate()
