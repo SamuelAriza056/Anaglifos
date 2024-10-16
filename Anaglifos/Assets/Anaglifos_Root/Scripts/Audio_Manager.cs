@@ -10,10 +10,9 @@ public class Audio_Manager : MonoBehaviour
 
     [Header("_________Clips_________")]
     public AudioClip background;
-    public AudioClip Death;
     public AudioClip Color;
     public AudioClip LevelStart;
-    public AudioClip Buttons;
+    public AudioClip PickUp;
 
     private void Start()
     {
