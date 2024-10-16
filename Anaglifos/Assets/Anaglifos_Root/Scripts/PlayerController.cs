@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
     public void Animator()
     {
         animator.SetBool("walk", Mathf.Abs(playerRb.velocity.x) > 0.001f);
+
     }
 
     public void PlayerDirection()
@@ -121,9 +122,10 @@ public class PlayerController : MonoBehaviour
     public void OnJump(InputAction.CallbackContext context)
     {
         if (context.started && isGrounded)
-        {
+        {          
             isGrounded = false;
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            animator.SetTrigger("Jump");
         }
     }
 
