@@ -10,6 +10,11 @@ public class Main_Menu : MonoBehaviour
         SceneManager.LoadSceneAsync("Lvl1");
     }
 
+    public void PlayGame2()
+    {
+        SceneManager.LoadSceneAsync("lvl 1.1");
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quit");
